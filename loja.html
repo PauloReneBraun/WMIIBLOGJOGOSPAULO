@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loja simulada da Paul Games - explora os jogos disponíveis e calcula o teu carrinho (sem pagamento real).">
+    <title>Loja - Paul Games</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="cabecalho-conteudo">
+        <a href="index.html" class="logo">PAUL<span>GAMES</span></a>
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="formulario.html">Interativo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1>Loja Paul Games</h1>
+        <p>Loja simulada para fins demonstrativos. Adiciona produtos, vê o total e finaliza a compra (sem pagamento real).</p>
+    </section>
+
+    <div class="layout-com-aside">
+
+        <section>
+            <h2 class="titulo-secao">Catálogo de Jogos</h2>
+            <div class="loja-grid">
+                <!-- Produtos preenchidos via JavaScript -->
+            </div>
+        </section>
+
+        <aside>
+            <div class="carrinho">
+                <h3>🛒 Carrinho</h3>
+                <ul id="carrinho-itens"></ul>
+                <p class="carrinho-total" id="carrinho-total">Total: € 0,00</p>
+                <div style="display: flex; gap: 0.5rem; margin-top: 1rem; flex-direction: column;">
+                    <button class="botao botao-rosa" id="carrinho-finalizar">Finalizar compra</button>
+                    <button class="botao" id="carrinho-limpar">Limpar carrinho</button>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <section style="margin-top: 3rem;">
+        <h2 class="titulo-secao">Tabela de Promoções</h2>
+        <div class="tabela-container">
+            <table>
+                <caption class="escondido">Tabela com promoções ativas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Desconto</th>
+                        <th scope="col">Validade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>RPG</td><td>30%</td><td>30/06/2026</td></tr>
+                    <tr><td>Indie</td><td>50%</td><td>15/07/2026</td></tr>
+                    <tr><td>Estratégia</td><td>20%</td><td>10/08/2026</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; color: var(--cor-texto-secundario);">
+            <em>Nota: esta loja é apenas uma simulação académica. Nenhum pagamento ou compra real é processado.</em>
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <div class="rodape-conteudo">
+        <div class="rodape-coluna">
+            <h4>Paul Games</h4>
+            <p>O teu portal de referência sobre videojogos. Notícias, análises e diversão.</p>
+        </div>
+        <div class="rodape-coluna">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+            </ul>
+        </div>
+        <div class="rodape-coluna">
+            <h4>Mais</h4>
+            <ul>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="formulario.html">Zona Interativa</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="rodape-coluna">
+            <h4>Externos</h4>
+            <ul>
+                <li><a href="https://www.ign.com" target="_blank" rel="noopener">IGN</a></li>
+                <li><a href="https://www.gamespot.com" target="_blank" rel="noopener">GameSpot</a></li>
+                <li><a href="https://store.steampowered.com" target="_blank" rel="noopener">Steam</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="rodape-base">
+        <p>&copy; 2026 Paul Games - Trabalho académico WMII LEM2025077. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
