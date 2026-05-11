@@ -1,208 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="As últimas notícias do mundo dos videojogos - lançamentos, eventos e tendências na Paul Games.">
-    <title>Notícias - Paul Games</title>
+    <title>Notícias</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <div class="cabecalho-conteudo">
-        <a href="index.html" class="logo">PAUL<span>GAMES</span></a>
-        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-        <nav aria-label="Navegação principal">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="formulario.html">Interativo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+
+    <div class="logo">
+        <h1>🎮 Paul Games</h1>
     </div>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="formulario.html">Formulário</a>
+    </nav>
+
+</header>
+
+<header>
+    <h1>📰 Notícias Geek</h1>
 </header>
 
 <main>
 
-    <section class="hero">
-        <h1>Últimas Notícias</h1>
-        <p>Fica a par dos lançamentos, eventos e novidades do universo gamer.</p>
-    </section>
+<section class="cards">
 
-    <section>
-        <h2 class="titulo-secao">Em Destaque</h2>
-        <div class="carrossel" aria-roledescription="carrossel" aria-label="Notícias em destaque">
-            <div class="carrossel-pista">
+<article class="card">
+    <h2>Marvel anuncia novo filme</h2>
+    <p>O universo Marvel vai crescer em 2026.</p>
+</article>
 
-                <div class="carrossel-slide">
-                    <img src="https://picsum.photos/seed/news1/1200/500" alt="Imagem da notícia: novo Cyber Runner anunciado">
-                    <h3>Cyber Runner 2026 anunciado oficialmente</h3>
-                    <p>O sucessor do bestseller chega no próximo verão com gráficos renovados e modo cooperativo.</p>
-                </div>
+<article class="card">
+    <h2>PlayStation 6</h2>
+    <p>Rumores sobre a nova consola da Sony.</p>
+</article>
 
-                <div class="carrossel-slide">
-                    <img src="https://picsum.photos/seed/news2/1200/500" alt="Imagem da notícia: torneio mundial">
-                    <h3>Torneio mundial de eSports bate recorde de espectadores</h3>
-                    <p>Mais de 5 milhões de pessoas acompanharam a final em direto. Resultados e momentos-chave.</p>
-                </div>
+<article class="card">
+    <h2>Fortnite Evento Especial</h2>
+    <p>Nova temporada com skins exclusivas.</p>
+</article>
 
-                <div class="carrossel-slide">
-                    <img src="https://picsum.photos/seed/news3/1200/500" alt="Imagem da notícia: estúdio independente">
-                    <h3>Estúdio indie português conquista prémios na GDC</h3>
-                    <p>O jogo "Mystic Quest" arrecadou 3 prémios internacionais incluindo "Melhor Narrativa".</p>
-                </div>
-
-                <div class="carrossel-slide">
-                    <img src="https://picsum.photos/seed/news4/1200/500" alt="Imagem da notícia: nova consola">
-                    <h3>Nova consola portátil promete revolução</h3>
-                    <p>Especificações técnicas reveladas e primeiras impressões da imprensa especializada.</p>
-                </div>
-
-            </div>
-
-            <div class="carrossel-controles">
-                <button class="carrossel-btn btn-anterior" aria-label="Slide anterior">‹</button>
-                <button class="carrossel-btn btn-proximo" aria-label="Próximo slide">›</button>
-            </div>
-
-            <div class="carrossel-indicadores"></div>
-        </div>
-    </section>
-
-    <div class="layout-com-aside">
-        <div>
-
-            <section>
-                <h2 class="titulo-secao">Artigos Recentes</h2>
-
-                <article class="card" style="margin-bottom: 1.5rem;">
-                    <img src="https://picsum.photos/seed/art1/800/300" alt="Imagem do artigo">
-                    <div class="card-conteudo">
-                        <span class="categoria">Análise</span>
-                        <h3>Análise: As 10 melhores expansões de RPG da última década</h3>
-                        <p>Uma viagem pelas expansões que marcaram o género e elevaram a fasquia da indústria. Histórias inesquecíveis e mundos que cresceram para além do jogo original.</p>
-                        <button class="botao" data-abrir-modal="modal-artigo1">Ler mais</button>
-                    </div>
-                </article>
-
-                <article class="card" style="margin-bottom: 1.5rem;">
-                    <img src="https://picsum.photos/seed/art2/800/300" alt="Imagem do artigo">
-                    <div class="card-conteudo">
-                        <span class="categoria">Lançamento</span>
-                        <h3>Pixel Wars chega à edição limitada física</h3>
-                        <p>O sucesso indie do ano recebe uma edição colecionador com banda sonora em vinil e art book exclusivo. Pré-encomendas abrem na próxima semana.</p>
-                        <button class="botao" data-abrir-modal="modal-artigo2">Ler mais</button>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="https://picsum.photos/seed/art3/800/300" alt="Imagem do artigo">
-                    <div class="card-conteudo">
-                        <span class="categoria">Indústria</span>
-                        <h3>Tendências do gaming em 2026: IA, cloud e VR</h3>
-                        <p>O que esperar do próximo ano? Analisamos as tecnologias que vão transformar a forma como jogamos.</p>
-                        <button class="botao" data-abrir-modal="modal-artigo3">Ler mais</button>
-                    </div>
-                </article>
-
-            </section>
-
-        </div>
-
-        <aside>
-            <h3>Categorias</h3>
-            <ul class="lista-estilizada">
-                <li><a href="#" style="color: inherit; text-decoration: none;">📰 Notícias gerais</a></li>
-                <li><a href="#" style="color: inherit; text-decoration: none;">🎮 Lançamentos</a></li>
-                <li><a href="#" style="color: inherit; text-decoration: none;">🏆 eSports</a></li>
-                <li><a href="#" style="color: inherit; text-decoration: none;">🔍 Análises</a></li>
-                <li><a href="#" style="color: inherit; text-decoration: none;">🎨 Indie</a></li>
-            </ul>
-
-            <h3 style="margin-top: 1.5rem;">Top Tags</h3>
-            <p style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-                <span class="categoria">RPG</span>
-                <span class="categoria">Indie</span>
-                <span class="categoria">PS5</span>
-                <span class="categoria">PC</span>
-                <span class="categoria">VR</span>
-                <span class="categoria">Mobile</span>
-            </p>
-        </aside>
-
-    </div>
+</section>
 
 </main>
 
-<!-- Modais para os artigos -->
-<div class="modal" id="modal-artigo1" role="dialog" aria-modal="true">
-    <div class="modal-conteudo">
-        <button class="fechar" aria-label="Fechar">&times;</button>
-        <h3>As 10 melhores expansões de RPG da última década</h3>
-        <p>As expansões de RPG são, muitas vezes, capítulos inteiros à parte que merecem reconhecimento próprio. Desde "Blood and Wine" a "Phantom Liberty", revisitamos os títulos que provaram que uma expansão pode redefinir um jogo. Cada uma destas obras trouxe novos personagens, novas regiões e novas mecânicas que enriqueceram o universo dos jogos originais.</p>
-        <p style="margin-top: 1rem;">Não percas a próxima parte do nosso especial, em que comparamos as expansões com as suas sequelas oficiais.</p>
-    </div>
-</div>
-
-<div class="modal" id="modal-artigo2" role="dialog" aria-modal="true">
-    <div class="modal-conteudo">
-        <button class="fechar" aria-label="Fechar">&times;</button>
-        <h3>Pixel Wars chega à edição limitada física</h3>
-        <p>A versão de colecionador inclui edição em caixa metálica, banda sonora em vinil duplo, art book de 120 páginas e cartas exclusivas. Limitada a 5000 cópias mundialmente. Pré-encomendas a partir de 12 de Junho.</p>
-        <p style="margin-top: 1rem;">Preço sugerido: € 89,99 - já disponível para reserva nas principais lojas online.</p>
-    </div>
-</div>
-
-<div class="modal" id="modal-artigo3" role="dialog" aria-modal="true">
-    <div class="modal-conteudo">
-        <button class="fechar" aria-label="Fechar">&times;</button>
-        <h3>Tendências do gaming em 2026</h3>
-        <p>A inteligência artificial está a transformar a forma como os NPCs interagem com os jogadores, criando experiências verdadeiramente dinâmicas. O cloud gaming continua a crescer, eliminando a necessidade de hardware dispendioso. E a realidade virtual finalmente entra no mainstream com headsets mais leves e acessíveis.</p>
-    </div>
-</div>
-
 <footer>
-    <div class="rodape-conteudo">
-        <div class="rodape-coluna">
-            <h4>Paul Games</h4>
-            <p>O teu portal de referência sobre videojogos. Notícias, análises e diversão.</p>
-        </div>
-        <div class="rodape-coluna">
-            <h4>Navegação</h4>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-            </ul>
-        </div>
-        <div class="rodape-coluna">
-            <h4>Mais</h4>
-            <ul>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="formulario.html">Zona Interativa</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </div>
-        <div class="rodape-coluna">
-            <h4>Externos</h4>
-            <ul>
-                <li><a href="https://www.ign.com" target="_blank" rel="noopener">IGN</a></li>
-                <li><a href="https://www.gamespot.com" target="_blank" rel="noopener">GameSpot</a></li>
-                <li><a href="https://store.steampowered.com" target="_blank" rel="noopener">Steam</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="rodape-base">
-        <p>&copy; 2026 Paul Games - Trabalho académico WMII LEM2025077. Todos os direitos reservados.</p>
-    </div>
+    <p>Paul Games</p>
 </footer>
 
-<script src="js/script.js"></script>
 </body>
 </html>

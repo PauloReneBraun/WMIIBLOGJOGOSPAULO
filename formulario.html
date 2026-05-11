@@ -1,133 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zona Interativa Paul Games - quiz, lista de tarefas, cronómetro e mais para os fãs de jogos.">
-    <title>Zona Interativa - Paul Games</title>
+    <title>Formulário</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <div class="cabecalho-conteudo">
-        <a href="index.html" class="logo">PAUL<span>GAMES</span></a>
-        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-        <nav aria-label="Navegação principal">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="formulario.html">Interativo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+
+    <div class="logo">
+        <h1>🎮 Paul Games</h1>
     </div>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="formulario.html">Formulário</a>
+    </nav>
+
+</header>
+
+<header>
+    <h1>📝 Formulário Gamer</h1>
 </header>
 
 <main>
 
-    <section class="hero">
-        <h1>Zona Interativa</h1>
-        <p>Diverte-te com o quiz gamer, organiza as tuas missões e cronometra os teus desafios.</p>
-    </section>
+<form onsubmit="return validarFormulario()">
 
-    <section>
-        <h2 class="titulo-secao">🧠 Quiz Gamer</h2>
-        <p style="margin-bottom: 1rem; color: var(--cor-texto-secundario);">Testa o teu conhecimento sobre o universo dos videojogos.</p>
-        <div class="quiz-container">
-            <div id="quiz" aria-live="polite"></div>
-        </div>
-    </section>
+<input type="text" id="nome" placeholder="Nome">
 
-    <section>
-        <h2 class="titulo-secao">⏱️ Cronómetro</h2>
-        <p style="margin-bottom: 1rem; color: var(--cor-texto-secundario);">Cronometra as tuas sessões de jogo ou desafios.</p>
-        <div class="cronometro">
-            <div class="cronometro-display" id="cronometro-display" aria-live="polite">00:00:00</div>
-            <div class="cronometro-controles">
-                <button class="botao" id="cron-iniciar">▶ Iniciar</button>
-                <button class="botao botao-rosa" id="cron-pausar">⏸ Pausar</button>
-                <button class="botao" id="cron-reset">⟲ Reset</button>
-            </div>
-        </div>
-    </section>
+<input type="email" id="email" placeholder="Email">
 
-    <section>
-        <h2 class="titulo-secao">📝 Lista de Missões</h2>
-        <p style="margin-bottom: 1rem; color: var(--cor-texto-secundario);">Organiza as tuas próximas missões. As tarefas ficam guardadas no teu navegador.</p>
-        <div class="todo-container">
-            <form id="todo-form">
-                <input type="text" id="todo-input" placeholder="Nova missão..." aria-label="Nova missão" maxlength="100">
-                <button type="submit" class="botao">Adicionar</button>
-            </form>
-            <ul id="todo-list" aria-live="polite"></ul>
-        </div>
-    </section>
+<textarea id="mensagem" placeholder="Mensagem"></textarea>
 
-    <section>
-        <h2 class="titulo-secao">💡 Modal de Curiosidades</h2>
-        <p style="margin-bottom: 1rem; color: var(--cor-texto-secundario);">Clica para ver curiosidades surpreendentes do mundo gamer.</p>
-        <div style="text-align: center;">
-            <button class="botao botao-rosa" data-abrir-modal="modal-curiosidade">Mostrar curiosidade</button>
-        </div>
-    </section>
+<button type="submit">Enviar</button>
+
+</form>
 
 </main>
 
-<div class="modal" id="modal-curiosidade" role="dialog" aria-modal="true">
-    <div class="modal-conteudo">
-        <button class="fechar" aria-label="Fechar">&times;</button>
-        <h3>🎮 Sabias que...</h3>
-        <ul class="lista-estilizada" style="margin-top: 1rem;">
-            <li>O Tetris foi criado em 1984 pelo russo Alexey Pajitnov?</li>
-            <li>O Super Mario apareceu pela primeira vez no Donkey Kong em 1981 com o nome de "Jumpman"?</li>
-            <li>O primeiro jogo da história foi o "Tennis for Two", criado em 1958?</li>
-            <li>O Pac-Man foi originalmente chamado "Puck Man" no Japão?</li>
-            <li>Minecraft é o videojogo mais vendido de sempre, com mais de 300 milhões de cópias?</li>
-        </ul>
-    </div>
-</div>
-
-<footer>
-    <div class="rodape-conteudo">
-        <div class="rodape-coluna">
-            <h4>Paul Games</h4>
-            <p>O teu portal de referência sobre videojogos. Notícias, análises e diversão.</p>
-        </div>
-        <div class="rodape-coluna">
-            <h4>Navegação</h4>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-            </ul>
-        </div>
-        <div class="rodape-coluna">
-            <h4>Mais</h4>
-            <ul>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="formulario.html">Zona Interativa</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </div>
-        <div class="rodape-coluna">
-            <h4>Externos</h4>
-            <ul>
-                <li><a href="https://www.ign.com" target="_blank" rel="noopener">IGN</a></li>
-                <li><a href="https://www.gamespot.com" target="_blank" rel="noopener">GameSpot</a></li>
-                <li><a href="https://store.steampowered.com" target="_blank" rel="noopener">Steam</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="rodape-base">
-        <p>&copy; 2026 Paul Games - Trabalho académico WMII LEM2025077. Todos os direitos reservados.</p>
-    </div>
-</footer>
-
 <script src="js/script.js"></script>
+
 </body>
 </html>
