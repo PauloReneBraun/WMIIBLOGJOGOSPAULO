@@ -20,7 +20,7 @@
         <a href="galeria.html">Galeria</a>
         <a href="sobre.html">Sobre</a>
         <a href="contacto.html">Contacto</a>
-        <a href="formulario.html">Formulário</a>
+        <a href="zona-interativa.html">Zona Interativa</a>
     </nav>
 
 </header>
@@ -33,14 +33,93 @@
 
 <section class="galeria">
 
-<img src="imagens/pokemon.jpg" alt="Pokémon">
-<img src="imagens/gta.jpg" alt="GTA VI">
-<img src="imagens/minecraft.jpg" alt="Minecraft">
-<img src="imagens/zelda.jpg" alt="The Legend of Zelda">
+<img src="imagens/pokemon.jpg" alt="Pokémon" class="galeria-img" 
+     data-title="Pokémon Ventos e Ondas" 
+     data-origin="Desenvolvido por Game Freak e publicado pela Nintendo"
+     data-description="Uma revolução no mundo Pokémon! Pokémon Ventos e Ondas  previsto a ser lançado em 2027 
+     até o presente momento foram divulgados poucos detalhes sobre o jogo, mas a expectativa é que ele traga uma experiência completamente nova para os fãs da série. Com gráficos aprimorados e uma jogabilidade inovadora, Pokémon Ventos e Ondas promete ser um marco na história dos jogos Pokémon. Prepare-se para explorar novos territórios, enfrentar desafios inéditos e capturar criaturas incríveis!">
+
+<img src="imagens/gta.jpg" alt="GTA VI" class="galeria-img" 
+     data-title="Grand Theft Auto VI" 
+     data-origin="Desenvolvido e publicado por Rockstar Games"
+     data-description="GTA VI representa a maior e mais ambiciosa entrada da série Grand Theft Auto até à data. Rockstar Games promete gráficos revolucionários que exploram todo o poder das consolas modernas, com uma cidade tão vasta e detalhada que oferece exploração infinita. A narrativa épica continua a tradição da série, com personagens memoráveis e uma história que mantém os jogadores completamente imersos. Novos sistemas de jogo e mecânicas inovadoras estabelecem novos padrões na indústria. GTA VI é o jogo que todos os gamers aguardam com entusiasmo!">
+
+<img src="imagens/minecraft.jpg" alt="Minecraft" class="galeria-img" 
+     data-title="Minecraft Caves & Cliffs" 
+     data-origin="Desenvolvido e publicado por Microsoft/Mojang Studios"
+     data-description="Minecraft continua a evoluir com a atualização massiva Caves & Cliffs! Esta atualização revoluciona completamente a forma como exploramos este universo voxelado. As cavernas receberam um redesenho completo com sistemas procedurais que criam exploração desafiante e recompensadora. A altura máxima de construção foi drasticamente aumentada, permitindo que construtores criem estruturas monumentais que antes eram impossíveis. Novos biomas, mobs e blocos expandem infinitamente as possibilidades criativas. Quer seja um explorador, constructor ou aventureiro, Minecraft oferece algo extraordinário para todos!">
+
+<img src="imagens/ERROR.png" alt="The Legend of Zelda" class="galeria-img" 
+     data-title="The Legend of Zelda: Tears of the Kingdom" 
+     data-origin="Desenvolvido e publicado pela Nintendo"
+     data-description="O legado de Zelda continua com Tears of the Kingdom, uma sequela épica que expande o universo de Hyrule de formas inimagináveis. A Nintendo criou um mundo ainda mais vasto, com novos mistérios para desvendar e desafios épicos para conquistar. A liberdade de exploração é levada ao extremo, permitindo aos jogadores resolver problemas de formas criativas e inovadoras. A narrativa é profunda e envolvente, com revelaçõescomoventes sobre a história de Hyrule. Link recebe novas habilidades poderosas que abrem novas possibilidades de exploração e combate. Este é um must-play para fãs da série!">
+
+<img src="imagens/pokemon battle.jpg" alt="Pokémon" class="galeria-img" 
+     data-title="Pokémon Champions" 
+     data-origin="Desenvolvido por ilca e publicado pela Nintendo"
+     data-description="Uma revolução no mundo Pokémon! Pokémon Champions apresenta um sistema de gameplay completamente renovado, combates por turnos e oferecendo uma experiência de batalhas competitivas. Este título marca uma nova fase do jogo Pokémon tão amado globalmente. Prepare-se para uma forma completamente nova de ser um Treinador Pokémon!">
 
 </section>
 
 </main>
+
+<div id="modalGaleria" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="fecharModalGaleria()">&times;</button>
+        <div id="modal-body-galeria">
+            <!-- Conteúdo da galeria será carregado aqui -->
+        </div>
+    </div>
+</div>
+
+<script>
+function abrirModalGaleria(titulo, origin, descricao, imagem) {
+    const modal = document.getElementById('modalGaleria');
+    const modalBody = document.getElementById('modal-body-galeria');
+    
+    modalBody.innerHTML = `
+        <img src="${imagem}" alt="${titulo}" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+        <h2 style="color: #00ffff; text-shadow: 0 0 10px #00ffff, 0 0 20px #7d3cff; margin-bottom: 15px; font-size: 2rem;">${titulo}</h2>
+        <p style="color: #00ffff; font-weight: bold; margin-bottom: 15px; font-size: 1rem;">📍 ${origin}</p>
+        <p style="color: #e0e0e0; line-height: 1.8; font-size: 1.05rem; text-align: justify;">${descricao}</p>
+    `;
+    
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function fecharModalGaleria() {
+    const modal = document.getElementById('modalGaleria');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('modalGaleria');
+    if (event.target == modal) {
+        fecharModalGaleria();
+    }
+}
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        fecharModalGaleria();
+    }
+});
+
+// Adicionar evento de click às imagens da galeria
+document.querySelectorAll('.galeria-img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+        const titulo = this.getAttribute('data-title');
+        const origin = this.getAttribute('data-origin');
+        const descricao = this.getAttribute('data-description');
+        const src = this.getAttribute('src');
+        
+        abrirModalGaleria(titulo, origin, descricao, src);
+    });
+});
+</script>
 
 </body>
 </html>

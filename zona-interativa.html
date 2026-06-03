@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Interativa - Paul Games</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>🎮 Paul Games</h1>
+    </div>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="zona-interativa.html">Zona Interativa</a>
+    </nav>
+</header>
+
+<main>
+    <section class="titulo">
+        <h2>🎯 Zona Interativa - Quiz Gamer</h2>
+    </section>
+
+    <section class="quiz-container">
+        
+        <!-- Tela Inicial -->
+        <div id="inicio" class="quiz-screen">
+            <div class="quiz-box">
+                <h2>Bem-vindo ao Quiz Gamer! 🎮</h2>
+                <p>Teste seus conhecimentos sobre os melhores videojogos de todos os tempos!</p>
+                <p class="quiz-info">5 perguntas | Dificuldade: Média</p>
+                <button onclick="iniciarQuiz()" class="btn-quiz">Começar Quiz</button>
+            </div>
+        </div>
+
+        <!-- Questões -->
+        <div id="quiz" class="quiz-screen" style="display: none;">
+            <div class="quiz-box">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                
+                <div class="pergunta-info">
+                    <span id="numero-pergunta">Pergunta 1/5</span>
+                    <span id="pontuacao">Pontos: 0</span>
+                </div>
+
+                <h3 id="pergunta"></h3>
+
+                <div id="opcoes" class="opcoes">
+                    <!-- Gerado dinamicamente -->
+                </div>
+
+                <button id="proxima-btn" onclick="proximaPergunta()" class="btn-quiz" style="display: none;">
+                    Próxima Pergunta
+                </button>
+            </div>
+        </div>
+
+        <!-- Resultado Final -->
+        <div id="resultado" class="quiz-screen" style="display: none;">
+            <div class="quiz-box resultado-box">
+                <h2>Quiz Finalizado! 🎉</h2>
+                <div class="score-circle">
+                    <span id="score-final"></span>
+                    <p>de 5</p>
+                </div>
+                <p id="mensagem-final" class="mensagem-resultado"></p>
+                <button onclick="reiniciarQuiz()" class="btn-quiz">Fazer Quiz Novamente</button>
+                <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Paul Games | Projeto WMII</p>
+</footer>
+
+<script src="js/quiz.js"></script>
+
+</body>
+</html>
