@@ -1,0 +1,240 @@
+/* QUIZ */
+
+.quiz-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.quiz-screen {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quiz-box {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 2px solid #7d3cff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(125, 60, 255, 0.3);
+    text-align: center;
+}
+
+.quiz-box h2 {
+    color: #00d4ff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.quiz-box h3 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.quiz-box p {
+    color: #b0b0b0;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.quiz-info {
+    color: #00d4ff;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.pergunta-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #00d4ff;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #333;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #00d4ff, #7d3cff);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* OPÇÕES */
+
+.opcoes {
+    display: grid;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.opcao {
+    padding: 15px 20px;
+    background: #1a1a1a;
+    border: 2px solid #444;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: left;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+}
+
+.opcao:hover {
+    border-color: #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.opcao.selecionada {
+    background: #00d4ff;
+    color: #0f0f0f;
+    border-color: #00d4ff;
+    font-weight: bold;
+}
+
+.opcao.correta {
+    background: #00cc44;
+    color: white;
+    border-color: #00cc44;
+}
+
+.opcao.errada {
+    background: #ff3333;
+    color: white;
+    border-color: #ff3333;
+}
+
+.opcao:disabled {
+    cursor: not-allowed;
+}
+
+/* BOTÕES */
+
+.btn-quiz {
+    background: linear-gradient(135deg, #7d3cff 0%, #00d4ff 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(125, 60, 255, 0.4);
+}
+
+.btn-quiz:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(125, 60, 255, 0.6);
+}
+
+.btn-voltar {
+    display: inline-block;
+    background: #444;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background: #666;
+}
+
+/* RESULTADO */
+
+.resultado-box {
+    padding: 60px 40px;
+}
+
+.resultado-box h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.score-circle {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #7d3cff 0%, #00d4ff 100%);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+}
+
+.score-circle span {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.score-circle p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 5px 0 0 0;
+}
+
+.mensagem-resultado {
+    font-size: 18px;
+    margin: 30px 0;
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+    .quiz-box {
+        padding: 30px 20px;
+    }
+
+    .quiz-box h2 {
+        font-size: 24px;
+    }
+
+    .quiz-box h3 {
+        font-size: 18px;
+    }
+
+    .opcoes {
+        gap: 10px;
+    }
+
+    .opcao {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .btn-quiz {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
